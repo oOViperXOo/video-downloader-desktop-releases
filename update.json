@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "version": "1.0.4",
-  "download_url": "https://github.com/oOViperXOo/video-downloader-desktop/releases/tag/v1.0.4",
-  "notes": "Each video shows only its available resolutions. Playlist videos are checked individually.",
-  "sha256": "f3f5caaf4143c0d9219d30df37e3da21295c220b8a9d80375bdde5c830f3d307",
-  "size_bytes": 127662005
+  "version": "1.0.5",
+  "download_url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/tag/v1.0.5",
+  "notes": "Check for updates uses the built-in Orvanta feed. Updated Python, PySide6 and FFmpeg. Unsigned Windows build.",
+  "sha256": "397ae5732913a8e28b9409e56101c214f7e87e14d9c9e41b353d811cbb4dd698",
+  "size_bytes": 129072157
 }
