@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "version": "1.0.4",
+  "download_url": "https://github.com/oOViperXOo/video-downloader-desktop/releases/tag/v1.0.4",
+  "notes": "Each video shows only its available resolutions. Playlist videos are checked individually.",
+  "sha256": "f3f5caaf4143c0d9219d30df37e3da21295c220b8a9d80375bdde5c830f3d307",
+  "size_bytes": 127662005
+}
