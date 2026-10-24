@@ -103,12 +103,12 @@ jobs:
       - name: Registered upgrade, equal-version reinstall and downgrade refusal
         shell: pwsh
         run: .venv\Scripts\python.exe tools\verify_registered_upgrade.py dist\RimaVideoDownloader-Setup.exe test-output\release\OrvantaVideoDownloader
-      - name: Check no tokens in built artifacts
+      - name: Check no tokens or private keys in built artifacts
         shell: pwsh
         run: |
           foreach ($f in Get-ChildItem dist -Filter *.exe) {
             $text = [Text.Encoding]::ASCII.GetString([IO.File]::ReadAllBytes($f.FullName))
-            if ($text -match 'ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}') { throw "token-like string found in $($f.Name)" }
+            if ($text -match 'ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----') { throw "token-like string found in $($f.Name)" }
           }
       - name: Hash the two release artifacts (explicit allowlist, never tests/ or source)
         shell: pwsh
