@@ -3,8 +3,6 @@
   "version": "1.1.0",
   "download_url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/tag/v1.1.0",
   "notes": "# Rima Video Downloader 1.1.0\n\n- Renamed the visible app, installer, Windows metadata and browser companion to Rima Video Downloader.\n- Fixed dropped/batch links being replaced by unrelated clipboard suggestions. Batch inspection starts only after the link dialog closes.\n- Failed video inspections show the service error rather than an empty-response JSON parser error.\n- Added a separate Minimize to tray button. Normal minimize stays on the taskbar, even with an older tray preference saved.\n- Preserved existing AppData settings, queue, history, browser pairing, executable and installation identity.\n- Includes the reviewed per-user installer and consent-based updater work. Production builds are unsigned. Without a production TUF trust root, updates use the checksum-verified full-installer fallback, not differential updates.\n\nWindows x64. Download only media you have permission to save. No DRM bypass.\n",
-  "sha256": "5a0d04357272c12ddb929a0fc9f5c4df4ee543efb1eb9c7c8b86adafc213db59",
-  "size_bytes": 134638659,
   "installer": {
     "url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.1.0/RimaVideoDownloader-Setup.exe",
     "sha256": "1974af00aeb64dec8696b0e5d8ecaf61aca3a3c7c54d9be11a72428e9f9fea7f",
