@@ -1,17 +1,18 @@
 {
   "schema_version": 1,
-  "version": "1.3.1",
-  "download_url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/tag/v1.3.1",
-  "notes": "- Block updates: installed copies download only the parts of the app that changed instead of the whole installer. A signed manifest pins the block map; every block and file is verified before anything is installed.\n- Cleaner installs: the installer is install-only (the single-file Portable EXE is discontinued), Qt translation files are no longer bundled, update staging files are removed after an update, and the uninstaller removes exactly the files of the version that is installed, including files added by in-app updates.\n- Browser extension: bundled with the app, with Open extension folder and Copy folder path in Settings, a copyable pairing dialog, and a clearer, light/dark popup.\n- Optional Start with Windows (opens minimized to the tray).\n- If FFmpeg is ever missing, the app offers a checksum-verified download from Settings > General.\n- New update signing key: this release embeds a new public key, so updates are now verified against the new key. Copies older than 1.3.1 cannot verify it and must install this release manually from the download page; later updates are automatic again.\n- Dark-theme checkboxes are now visible; the main menu button has a tooltip.\n\nWindows x64 only for installer updates. Download only media you have permission to save. No DRM bypass. Builds are unsigned.",
+  "version": "1.3.2",
+  "download_url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/tag/v1.3.2",
+  "notes": "- Block updates: installed copies download only the parts of the app that changed instead of the whole installer. A signed manifest pins the block map; every block and file is verified before anything is installed.\n- Cleaner installs: the installer is install-only (the single-file Portable EXE is discontinued), Qt translation files are no longer bundled, update staging files are removed after an update, and the uninstaller removes exactly the files of the version that is installed, including files added by in-app updates.\n- Browser extension: bundled with the app, with Open extension folder and Copy folder path in Settings, a copyable pairing dialog, and a clearer, light/dark popup.\n- Optional Start with Windows (opens minimized to the tray).\n- If FFmpeg is ever missing, the app offers a checksum-verified download from Settings > General.\n- Names: the app now installs to `%LOCALAPPDATA%\\Programs\\ELADWYSOFT\\RimaVideoDownloader`, the executable is `RimaVideoDownloader.exe`, the publisher is ELADWYSOFT, and every Orvanta name is gone from the installer, registry entries and file properties. Setup offers to remove an earlier installation; settings, queue and history are kept.\n- New update signing key: this release embeds a new public key, so updates are now verified against the new key. Copies older than 1.3.2 cannot update in place (new key, folder and executable name) and must install this release once from the download page; later updates are automatic again.\n- Dark-theme checkboxes are now visible; the main menu button has a tooltip.\n\nWindows x64 only for installer updates. Download only media you have permission to save. No DRM bypass. Builds are unsigned.",
+  "min_version": "1.3.2",
   "installer": {
-    "url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.3.1/RimaVideoDownloader-Setup.exe",
-    "sha256": "23be1fa8319fa04c6eb8a8c476b8172396664213e669a53d49f1cc9182488841",
-    "size_bytes": 94950687
+    "url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.3.2/RimaVideoDownloader-Setup.exe",
+    "sha256": "e0a73a020df68f877b67a63ff2a1f214b7bb048715b1a7305683dc9f7a99484e",
+    "size_bytes": 94942878
   },
   "blockmap": {
-    "url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.3.1/blockmap.json",
-    "pack_url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.3.1/RimaVideoDownloader-1.3.1.pack",
-    "sha256": "0148fed1cf9d6e7a424f22edbc6a14581ac13cd90942329f6ed3d6f75342564e",
-    "size_bytes": 309218
+    "url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.3.2/blockmap.json",
+    "pack_url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.3.2/RimaVideoDownloader-1.3.2.pack",
+    "sha256": "0859b827d1d295d9d4c1326b35ab2c790dc03477990b8f7c1b46573a50d1594f",
+    "size_bytes": 309215
   }
 }
