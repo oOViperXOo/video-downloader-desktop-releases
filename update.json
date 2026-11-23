@@ -1,18 +1,42 @@
 {
   "schema_version": 1,
-  "version": "1.4.1",
-  "download_url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/tag/v1.4.1",
-  "notes": "- Fixes in-app updates: the helper that copies the new files in after you choose Install and restart never started, so updates from 1.3.2 and 1.4.0 did nothing. It now starts correctly, runs without any window, logs to `update-install.log` in the install folder, and shows a normal message box if something goes wrong.\n- Copies of 1.3.2 and 1.4.0 cannot update themselves (the faulty helper is part of those versions): install this release once from the download page. Setup keeps your settings, queue and history, and clears the leftover \"update in progress\" lock a failed attempt may have left behind. Updates from 1.4.1 onward are in-app again.\n- Browser extension 0.2.1: Chrome and Edge no longer show the warning about `background.scripts`. Open extension folder now also creates a separate `browser-extension-firefox` folder with the manifest Firefox needs.\n- Includes everything from 1.4.0: the in-page Download button with a quality menu, the System accent color option and the guided scheduling editor.\n\nWindows x64 only for installer updates. Download only media you have permission to save. No DRM bypass. Builds are unsigned.",
+  "version": "1.5.0",
+  "download_url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/tag/v1.5.0",
+  "notes": "### New\n- **Silent updates.** Choose Install and restart and Rima closes, updates itself in the background and opens again by itself. No setup window, no extra steps. Your settings, queue and history are kept.\n\n### Improved\n- **Download button on YouTube.** It now works on links that belong to a playlist (it uses the video you are watching), and it looks up the qualities as soon as a video is on the page, so it is ready when you hover.\n- **Clearer browser extension.** The extension popup tells you when the app is too old for the in-page button. Extension 0.2.2.\n- **Cleaner updates.** Setup removes the leftovers of the earlier update helper.\n\n### Good to know\n- Each update now downloads the full installer (about 92 MB).",
+  "changelog": [
+    {
+      "version": "1.5.0",
+      "notes": "### New\n- **Silent updates.** Choose Install and restart and Rima closes, updates itself in the background and opens again by itself. No setup window, no extra steps. Your settings, queue and history are kept.\n\n### Improved\n- **Download button on YouTube.** It now works on links that belong to a playlist (it uses the video you are watching), and it looks up the qualities as soon as a video is on the page, so it is ready when you hover.\n- **Clearer browser extension.** The extension popup tells you when the app is too old for the in-page button. Extension 0.2.2.\n- **Cleaner updates.** Setup removes the leftovers of the earlier update helper.\n\n### Good to know\n- Each update now downloads the full installer (about 92 MB)."
+    },
+    {
+      "version": "1.4.1",
+      "notes": "### Fixed\n- **In-app updates now work.** The helper that copies the new files in after you choose Install and restart never started, so updates from 1.3.2 and 1.4.0 did nothing. It now starts correctly, runs without any window, writes a log to `update-install.log` in the install folder and shows a normal message if something goes wrong.\n- **Browser extension warning.** Chrome and Edge no longer show the warning about `background.scripts`. Open extension folder also creates a separate `browser-extension-firefox` folder with the manifest Firefox needs. Extension 0.2.1.\n\n### Good to know\n- Copies of 1.3.2 and 1.4.0 cannot update themselves. Install this version once from the download page; Setup keeps your settings and clears the leftover lock a failed attempt may have left.\n- Everything from 1.4.0 is included."
+    },
+    {
+      "version": "1.4.0",
+      "notes": "### New\n- **Download button on videos.** A Download button appears over a video on the page once something downloadable is found. Click it to see the available qualities with their sizes and pick one: Rima queues that exact quality and starts it. On pages the app cannot read, it lists the media files the extension detected instead. You can turn it off in the extension options. Extension 0.2.0.\n- **Accent color.** Settings > General has a new Accent color option: App (the built-in teal) or System (your Windows accent, updated live). System accents are adjusted so text stays readable in light and dark mode.\n- **Guided scheduling.** Settings > Schedule and updates and each queue's Edit dialog now use a calendar, quick choices, quiet-hour presets, time dropdowns and a plain-language summary of what will happen. Saved schedules keep working."
+    },
+    {
+      "version": "1.3.2",
+      "notes": "- Block updates: installed copies download only the parts of the app that changed instead of the whole installer. A signed manifest pins the block map; every block and file is verified before anything is installed.\n- Cleaner installs: the installer is install-only (the single-file Portable EXE is discontinued), Qt translation files are no longer bundled, update staging files are removed after an update, and the uninstaller removes exactly the files of the version that is installed, including files added by in-app updates.\n- Browser extension: bundled with the app, with Open extension folder and Copy folder path in Settings, a copyable pairing dialog, and a clearer, light/dark popup.\n- Optional Start with Windows (opens minimized to the tray).\n- If FFmpeg is ever missing, the app offers a checksum-verified download from Settings > General.\n- Names: the app now installs to `%LOCALAPPDATA%\\Programs\\ELADWYSOFT\\RimaVideoDownloader`, the executable is `RimaVideoDownloader.exe`, the publisher is ELADWYSOFT, and every Orvanta name is gone from the installer, registry entries and file properties. Setup offers to remove an earlier installation; settings, queue and history are kept.\n- New update signing key: this release embeds a new public key, so updates are now verified against the new key. Copies older than 1.3.2 cannot update in place (new key, folder and executable name) and must install this release once from the download page; later updates are automatic again.\n- Dark-theme checkboxes are now visible; the main menu button has a tooltip.\n\nWindows x64 only for installer updates. Download only media you have permission to save. No DRM bypass. Builds are unsigned."
+    },
+    {
+      "version": "1.2.0",
+      "notes": "- Named queues: separate downloads into named tabs with optional per-queue start times and quiet hours; global quiet hours always apply on top. Move items between queues from the row menu.\n- Subscriptions: follow channels and playlists with scheduled checks. New videos arrive review-first by default, or start automatically per subscription. The first check previews a few recent uploads instead of the full backlog.\n- When downloads finish: optionally close the app, sleep, shut down or lock when the queue drains (Windows and Linux). Sleep, shutdown and lock show a 60-second cancellable warning; any new download cancels the countdown.\n- Trim: optionally download only a chosen time range of a video.\n- Engine updates: check for and install yt-dlp engine updates from Settings (Windows and Linux).\n- Repairs: dropping links works over the whole queue area, the System theme follows OS changes, Settings opens compact, and large playlists load progressively.\n- Stability: quitting during a background subscription check no longer crashes.\n- macOS: this release builds and runs, but the engine updater and the sleep/shutdown/lock finish actions are not available on macOS in this version.\n\nWindows x64, Linux and macOS (Apple silicon). Download only media you have permission to save. No DRM bypass. Production builds are unsigned; updates use the checksum-verified full-installer fallback, not differential updates."
+    },
+    {
+      "version": "1.1.0",
+      "notes": "- Renamed the visible app, installer, Windows metadata and browser companion to Rima Video Downloader.\n- Fixed dropped/batch links being replaced by unrelated clipboard suggestions. Batch inspection starts only after the link dialog closes.\n- Failed video inspections show the service error rather than an empty-response JSON parser error.\n- Added a separate Minimize to tray button. Normal minimize stays on the taskbar, even with an older tray preference saved.\n- Preserved existing AppData settings, queue, history, browser pairing, executable and installation identity.\n- Includes the reviewed per-user installer and consent-based updater work. Production builds are unsigned. Without a production TUF trust root, updates use the checksum-verified full-installer fallback, not differential updates.\n\nWindows x64. Download only media you have permission to save. No DRM bypass."
+    },
+    {
+      "version": "1.0.2",
+      "notes": "- About credits [oOViperXOo](https://github.com/oOViperXOo) and links to the [GitHub repository](https://github.com/oOViperXOo/video-downloader-desktop).\n- Consistent Orvanta branding across the app and Windows packages.\n- Updated the README with a screenshot of the Windows interface.\n\nWindows x64 only. Choose Portable.exe for a standalone executable, or Setup.exe for Portable (default) or installed mode. Existing settings/history and single-instance behavior remain compatible. Fully exit the previous app, including the tray, before opening the update. Executables remain unsigned."
+    }
+  ],
   "min_version": "1.4.1",
   "installer": {
-    "url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.4.1/RimaVideoDownloader-Setup.exe",
-    "sha256": "0d822481a72002aefafb58f3ddf8d34d49b196477c1b0e2b7c01c46bc62e21f9",
-    "size_bytes": 96003814
-  },
-  "blockmap": {
-    "url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.4.1/blockmap.json",
-    "pack_url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.4.1/RimaVideoDownloader-1.4.1.pack",
-    "sha256": "7b15f40e79d9fdd2f91b301152c134340412c7bcbfd90c366a67fe76466feaf6",
-    "size_bytes": 310641
+    "url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.5.0/RimaVideoDownloader-Setup.exe",
+    "sha256": "66c377e0e2532d1ac2c877d13ff381a774bc089591cd0b89e8394a29915c20ce",
+    "size_bytes": 95991490
   }
 }
