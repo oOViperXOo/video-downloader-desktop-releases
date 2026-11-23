@@ -1,17 +1,18 @@
 {
   "schema_version": 1,
-  "version": "1.4.0",
-  "download_url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/tag/v1.4.0",
-  "notes": "- In-page Download button (browser extension 0.2.0): a Download button appears over a video on the page, but only once something downloadable is found. Click it to see the available qualities with sizes, pick one, and Rima queues that exact quality and starts it. On pages the app cannot read, the button lists the media files the extension detected instead. Turn it off in the extension Options.\n- Accent color: Settings > General has a new Accent color option, App (built-in teal) or System (your operating system accent, updated live). System accents are adjusted so text stays readable in both light and dark mode.\n- Guided scheduling: Settings > Schedule and updates and each queue's Edit dialog now use a calendar picker with quick choices, quiet-hour presets and time dropdowns, retries as a dropdown, and a plain-language summary of what will happen. Saved schedules keep working unchanged.\n- The app answers the extension's new quality lookup (receiver protocol additions: formats lookup and picking a quality); older extension versions keep working.\n\nWindows x64 only for installer updates. Download only media you have permission to save. No DRM bypass. Builds are unsigned.",
+  "version": "1.4.1",
+  "download_url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/tag/v1.4.1",
+  "notes": "- Fixes in-app updates: the helper that copies the new files in after you choose Install and restart never started, so updates from 1.3.2 and 1.4.0 did nothing. It now starts correctly, runs without any window, logs to `update-install.log` in the install folder, and shows a normal message box if something goes wrong.\n- Copies of 1.3.2 and 1.4.0 cannot update themselves (the faulty helper is part of those versions): install this release once from the download page. Setup keeps your settings, queue and history, and clears the leftover \"update in progress\" lock a failed attempt may have left behind. Updates from 1.4.1 onward are in-app again.\n- Browser extension 0.2.1: Chrome and Edge no longer show the warning about `background.scripts`. Open extension folder now also creates a separate `browser-extension-firefox` folder with the manifest Firefox needs.\n- Includes everything from 1.4.0: the in-page Download button with a quality menu, the System accent color option and the guided scheduling editor.\n\nWindows x64 only for installer updates. Download only media you have permission to save. No DRM bypass. Builds are unsigned.",
+  "min_version": "1.4.1",
   "installer": {
-    "url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.4.0/RimaVideoDownloader-Setup.exe",
-    "sha256": "8b836fdd87c05c48be86a89a05af95c1069bd5ad280e6d05c6bc1c74b469a559",
-    "size_bytes": 95981293
+    "url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.4.1/RimaVideoDownloader-Setup.exe",
+    "sha256": "0d822481a72002aefafb58f3ddf8d34d49b196477c1b0e2b7c01c46bc62e21f9",
+    "size_bytes": 96003814
   },
   "blockmap": {
-    "url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.4.0/blockmap.json",
-    "pack_url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.4.0/RimaVideoDownloader-1.4.0.pack",
-    "sha256": "6a6b2d60bed1044ed29054c77ff5479242f93b9d09843f28439d8236fcc31098",
-    "size_bytes": 310396
+    "url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.4.1/blockmap.json",
+    "pack_url": "https://github.com/oOViperXOo/video-downloader-desktop-releases/releases/download/v1.4.1/RimaVideoDownloader-1.4.1.pack",
+    "sha256": "7b15f40e79d9fdd2f91b301152c134340412c7bcbfd90c366a67fe76466feaf6",
+    "size_bytes": 310641
   }
 }
